@@ -61,7 +61,7 @@
 
 .orders-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
@@ -315,9 +315,17 @@
   width: 100%;
   height: 100vh;
   display: flex;
-  overflow-x: hidden;
- scroll-behavior: smooth;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.journey-slider-container::-webkit-scrollbar {
+  display: none;
 }
 
 /* Journey Slide */
@@ -351,10 +359,31 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
   box-sizing: border-box;
   margin: 0 auto;
-  max-height: 90vh;
+  max-height: 85vh;
+  scrollbar-width: thin;
+  scrollbar-color: #D4A574 rgba(212, 165, 116, 0.2);
+}
+
+.slide-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.slide-content::-webkit-scrollbar-track {
+  background: rgba(212, 165, 116, 0.1);
+  border-radius: 10px;
+}
+
+.slide-content::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #D4A574, #B8860B);
+  border-radius: 10px;
+}
+
+.slide-content::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #B8860B, #D4A574);
 }
 
 /* Slide Header */
@@ -1104,27 +1133,35 @@
 }
 
 @media (max-width: 768px) {
+  .journey-slider-container {
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+  
   .journey-slide {
-    padding: 100px 20px 80px;
+    padding: 80px 15px 60px;
+    min-width: 100%;
   }
 
   .slide-content {
-    padding: 40px 24px;
-    gap: 30px;
+    padding: 30px 20px;
+    gap: 24px;
+    max-height: 80vh;
   }
 
   .slide-header h2 {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .slide-icon {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
   }
 
   .slide-icon svg {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
   }
 
   .slide-details {
@@ -1132,22 +1169,22 @@
   }
 
   .detail-card {
-    padding: 16px 20px;
+    padding: 16px 18px;
     flex-wrap: wrap;
   }
 
   .detail-icon {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .detail-info {
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
+    gap: 6px;
   }
 
   .detail-info strong {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .detail-info span {
@@ -1247,39 +1284,82 @@
     font-size: 0.9rem;
   }
 }
+}
+
+/* Tablet View */
+@media (max-width: 1024px) {
+  .orders-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
 
 @media (max-width: 768px) {
   .my-orders-page {
-    padding: 5rem 1rem 2rem 1rem;
+    padding: 30px 20px 60px 20px;
+  }
+  
+  .orders-container {
+    width: 100%;
+    padding: 0;
   }
 
   .orders-title {
-    font-size: 2.5rem;
+    font-size: 32px;
   }
 
   .orders-subtitle {
-    font-size: 1.2rem;
+    font-size: 14px;
   }
 
   .orders-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0;
+  }
+  
+  .order-card {
+    margin: 0 auto 1rem;
+    width: 100%;
+    max-width: 100%;
   }
 
   .journey-viewer {
-    padding: 1rem;
+    padding: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .journey-content {
     padding: 1rem;
-    max-height: 90vh;
+    max-height: none;
+    overflow-y: visible;
   }
 
   .step-info h4 {
     font-size: 16px;
   }
-
-  .orders-grid {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  
+  .view-journey-btn {
+    padding: 14px 24px;
+    font-size: 14px;
+  }
+  
+  .order-details {
+    padding: 20px;
+  }
+  
+  .detail-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .detail-label {
+    font-size: 12px;
+  }
+  
+  .detail-value {
+    font-size: 16px;
   }
 }
 
