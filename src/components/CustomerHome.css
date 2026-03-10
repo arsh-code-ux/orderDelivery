@@ -1,0 +1,376 @@
+.customer-home-section {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #3E2723 0%, #5D4037 50%, #4E342E 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.customer-home-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.customer-home-title {
+  font-size: 3.5rem;
+  color: #FFFFFF;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+
+.living-room {
+  width: 100%;
+  max-width: 1200px;
+  background: linear-gradient(to bottom, #F5E6D3 0%, #E0D5C7 100%);
+  border-radius: 30px;
+  padding: 3rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 5;
+}
+
+.room-interior {
+  position: relative;
+  min-height: 400px;
+}
+
+.wall {
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(to bottom, #BCAAA4 0%, #A1887F 100%);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: inset 0 -10px 30px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+}
+
+.displayed-art {
+  position: relative;
+}
+
+.art-frame {
+  background: linear-gradient(135deg, #8D6E63 0%, #6D4C41 100%);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.art-piece {
+  font-size: 8rem;
+  background: linear-gradient(135deg, #FFFFFF 0%, #F5E6D3 100%);
+  padding: 2rem;
+  border-radius: 10px;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+}
+
+.sparkle {
+  position: absolute;
+  font-size: 2rem;
+  animation: twinkle 2s ease-in-out infinite;
+}
+
+.sparkle-1 {
+  top: -10px;
+  left: -10px;
+}
+
+.sparkle-2 {
+  top: -10px;
+  right: -10px;
+  animation-delay: 0.5s;
+}
+
+.sparkle-3 {
+  bottom: -10px;
+  left: -10px;
+  animation-delay: 1s;
+}
+
+.sparkle-4 {
+  bottom: -10px;
+  right: -10px;
+  animation-delay: 1.5s;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(0.8) rotate(180deg);
+  }
+}
+
+.wall-decorations {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+.wall-lamp {
+  font-size: 2.5rem;
+  filter: drop-shadow(0 4px 8px rgba(255, 200, 0, 0.6));
+  animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% {
+    filter: drop-shadow(0 4px 8px rgba(255, 200, 0, 0.6));
+  }
+  50% {
+    filter: drop-shadow(0 4px 20px rgba(255, 200, 0, 1));
+  }
+}
+
+.furniture {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.sofa {
+  font-size: 5rem;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));
+}
+
+.plant {
+  font-size: 4rem;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.3));
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.table-surface {
+  width: 100px;
+  height: 10px;
+  background: #8D6E63;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
+
+.table-items {
+  font-size: 2rem;
+}
+
+.guests-area {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.guest {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.guest-icon {
+  font-size: 4rem;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.3));
+}
+
+.pointing-hand {
+  font-size: 2rem;
+  transform: rotate(-45deg);
+  animation: point 1s ease-in-out infinite;
+}
+
+@keyframes point {
+  0%, 100% {
+    transform: rotate(-45deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-45deg) translateY(-5px);
+  }
+}
+
+.admiration-bubble {
+  background: #FFFFFF;
+  color: #3E2723;
+  padding: 0.8rem 1.2rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.admiration-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #FFFFFF;
+}
+
+.final-message {
+  background: #FFFFFF;
+  padding: 2rem 3rem;
+  border-radius: 30px;
+  text-align: center;
+  margin-top: 2rem;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  max-width: 700px;
+}
+
+.message-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.final-message h2 {
+  font-size: 2.5rem;
+  color: #3E2723;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.final-message p {
+  font-size: 1.2rem;
+  color: #6D4C41;
+  margin-bottom: 1.5rem;
+}
+
+.satisfaction-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: linear-gradient(135deg, #FFD93D 0%, #FFC107 100%);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.badge-icon {
+  font-size: 1.5rem;
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.badge-text {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #3E2723;
+}
+
+.journey-complete {
+  position: absolute;
+  bottom: 2rem;
+  text-align: center;
+  z-index: 10;
+}
+
+.journey-complete p {
+  font-size: 1.5rem;
+  color: #FFD93D;
+  font-weight: 700;
+  animation: celebrate 2s ease-in-out infinite;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes celebrate {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: 1024px) {
+  .guests-area {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .furniture {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .customer-home-title {
+    font-size: 2.5rem;
+  }
+
+  .living-room {
+    padding: 1.5rem;
+  }
+
+  .wall {
+    height: 200px;
+  }
+
+  .art-piece {
+    font-size: 5rem;
+    padding: 1rem;
+  }
+
+  .guest-icon {
+    font-size: 3rem;
+  }
+
+  .sofa {
+    font-size: 4rem;
+  }
+
+  .final-message {
+    padding: 1.5rem 2rem;
+  }
+
+  .final-message h2 {
+    font-size: 1.8rem;
+  }
+
+  .final-message p {
+    font-size: 1rem;
+  }
+
+  .guests-area {
+    gap: 1.5rem;
+  }
+}
