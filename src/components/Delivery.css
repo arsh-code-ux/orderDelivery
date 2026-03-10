@@ -1,20 +1,21 @@
 .delivery-section {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: linear-gradient(to bottom, #87CEEB 0%, #5D4037 70%, #3E2723 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   position: relative;
-  overflow: hidden;
-  padding: 2rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 40px 20px 60px;
 }
 
 .delivery-title {
-  font-size: 3.5rem;
+  font-size: 36px;
   color: #FFFFFF;
-  margin-bottom: 2rem;
+  margin-bottom: 30px;
   font-weight: 700;
   text-align: center;
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
@@ -296,8 +297,13 @@
 }
 
 @media (max-width: 768px) {
+  .delivery-section {
+    padding: 30px 16px;
+  }
+
   .delivery-title {
-    font-size: 2.5rem;
+    font-size: 28px;
+    margin-bottom: 20px;
   }
 
   .building {

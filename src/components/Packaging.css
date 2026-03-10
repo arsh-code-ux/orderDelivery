@@ -1,15 +1,15 @@
 .packaging-section {
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   background: linear-gradient(135deg, #FFFFFF 0%, #FFF9F0 50%, #FFFFFF 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   position: relative;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 3rem 2rem;
+  padding: 40px 20px 60px;
 }
 
 .packaging-section::before {
@@ -38,16 +38,18 @@
 }
 
 .packaging-title {
-  font-size: 3.5rem;
+  font-size: 36px;
   color: #2C1810;
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
   font-weight: 800;
   text-align: center;
-  letter-spacing: -1.5px;
+  letter-spacing: -1px;
   z-index: 1;
   background: linear-gradient(135deg, #2C1810 0%, #B8860B 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
   background-clip: text;
 }
 
@@ -1049,4 +1051,15 @@
   .step-indicator span {
     font-size: 0.75rem;
   }
+
+  .packaging-title {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .packaging-section {
+    padding: 30px 16px 50px;
+  }
+}
+
 }

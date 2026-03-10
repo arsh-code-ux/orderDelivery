@@ -199,12 +199,12 @@ function MyOrders({ orders }) {
                   </span>
                   <span className="meta-item">
                     <span className="meta-icon">📦</span>
-                    Qty: {order.quantity}
+                    Qty: {order.quantity || 1}
                   </span>
                 </div>
 
                 <div className="order-price">
-                  ₹{(order.product.price * order.quantity).toLocaleString()}
+                  ₹{(order.total || (order.product.price * (order.quantity || 1))).toLocaleString()}
                 </div>
 
                 <div className="order-date">
@@ -275,14 +275,14 @@ function MyOrders({ orders }) {
                     <div className="detail-icon">📦</div>
                     <div className="detail-info">
                       <strong>Quantity</strong>
-                      <span>{selectedOrder.quantity} item(s)</span>
+                      <span>{selectedOrder.quantity || 1} item(s)</span>
                     </div>
                   </div>
                   <div className="detail-card">
                     <div className="detail-icon">💰</div>
                     <div className="detail-info">
                       <strong>Total Amount</strong>
-                      <span>₹{selectedOrder.total.toLocaleString()}</span>
+                      <span>₹{(selectedOrder.total || (selectedOrder.product.price * (selectedOrder.quantity || 1))).toLocaleString()}</span>
                     </div>
                   </div>
                   <div className="detail-card">
