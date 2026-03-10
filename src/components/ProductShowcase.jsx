@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import './ProductShowcase.css';
+import Footer from './Footer';
 
 const products = [
   {
@@ -228,6 +229,8 @@ function ProductShowcase({ onPurchase }) {
           </div>
         </div>
       )}
+      
+      <Footer />
     </div>
   );
 }

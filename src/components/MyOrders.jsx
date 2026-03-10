@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import './MyOrders.css';
+import Footer from './Footer';
 import packagingAnimation from '../animation12.gif';
 import greenTickGif from '../greentick.gif';
 import dispatchGif from '../dispatch.gif';
@@ -684,6 +685,8 @@ function MyOrders({ orders }) {
           </div>
         </div>
       )}
+      
+      <Footer />
     </div>
   );
 }

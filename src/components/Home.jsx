@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import './Home.css';
 import orderBackground from '../Pasted image.png';
+import Footer from './Footer';
 
 function Home({ onExploreProducts }) {
   useEffect(() => {
@@ -190,6 +191,8 @@ function Home({ onExploreProducts }) {
           </div>
         </div>
       </section>
+      
+      <Footer />
     </div>
   );
 }

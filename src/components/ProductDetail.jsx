@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import gsap from 'gsap';
 import './ProductDetail.css';
+import Footer from './Footer';
 
 function ProductDetail({ product, onConfirmOrder, onBack }) {
   const [quantity, setQuantity] = useState(1);
@@ -179,6 +180,8 @@ function ProductDetail({ product, onConfirmOrder, onBack }) {
           </div>
         </div>
       </div>
+      
+      <Footer />
     </div>
   );
 }
